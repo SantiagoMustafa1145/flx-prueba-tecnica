@@ -1,16 +1,21 @@
-# Algoritmos en JavaScript
-En esta sección encontrarás una serie de ejercicios de programación que forman parte de nuestra prueba técnica. 
+# Prueba técnica
 
-En el archivo `index.js`, se detallan los ejercicios junto con las instrucciones y ejemplos de entrada y salida esperados. 
+## Algoritmos en JavaScript
+
+En esta sección encontrarás una serie de ejercicios de programación que forman parte de nuestra prueba técnica.
+
+En el archivo `index.js`, se detallan los ejercicios junto con las instrucciones y ejemplos de entrada y salida esperados.
 
 Para verificar tu progreso, podrás correr los siguientes comandos:
-```bash 
+
+```bash
    npm install /* Solo una vez */
    npm test
 ```
 
-# Consultas SQL
-Dada la siguiente base de datos relacional. 
+## Consultas SQL
+
+Dada la siguiente base de datos relacional.
 Resuelva las siguientes consultas SQL.
 Las mismas las deberás realizar en el archivo `consultas.sql`.
 

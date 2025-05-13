@@ -4,7 +4,9 @@
 */
 
 function reverseString(str) {
-  // Tu solución acá  
+  // Tu solución acá
+  // Convierto el string en un Array de caracteres con el método split, luego con el método reverse de Array lo invierto para luego con join devoler el string invertido
+  return str.split("").reverse().join("");
 }
 
 /*
@@ -14,6 +16,8 @@ function reverseString(str) {
 */
 function isPalindrome(str) {
   // Tu solución acá
+  // Hago lo mismo que en reverse string, solo que ahora lo comparo con el original
+  return str === str.split("").reverse().join("");
 }
 
 /*
@@ -29,10 +33,29 @@ function isPalindrome(str) {
   Salida: [1, 2]
 */
 
+// Aclaro que lo hice así porque se piden los valores que sumen el menor número, no las posiciones.
 function closestPair(arr) {
   // Tu solución acá
-}
+  // Ordeno el Array, ésto me permitirá comparar los valores de menor a mayor haciendo más fácil
+  // El encontrar la menor suma de los valores que estén a la par
+  const sortedArr = [...arr].sort((a, b) => a - b);
 
+  let minDif = Infinity;
+  let nearestPair = [];
+
+  for (let i = 0; i < sortedArr.length - 1; i++) {
+    // Guardo la diferencia actual y la comparo con la mínima que tengo guardada.
+    // En caso de que la actual sea menor, actualizo el valor de minDif con el actual.
+    // Guardo en nearestPair los valores que conforman el menor valor absoluto que estén a la par.
+    const currentDif = Math.abs(sortedArr[i] - sortedArr[i + 1]);
+    if (currentDif < minDif) {
+      minDif = currentDif;
+      nearestPair = [sortedArr[i], sortedArr[i + 1]];
+    }
+  }
+
+  return nearestPair;
+}
 
 /*
   Ejercicio 4: Calculadora - Programación Orientada a Objetos
@@ -68,6 +91,51 @@ function closestPair(arr) {
 
 class Calculator {
   // Tu solución acá
+  constructor() {
+    this.lastResult = null;
+  }
+
+  getLastResult() {
+    return this.lastResult;
+  }
+
+  add(a, b) {
+    const result = a + b;
+    this.lastResult = result;
+    return result;
+  }
+
+  subtract(a, b) {
+    const result = a - b;
+    this.lastResult = result;
+    return result;
+  }
+
+  multiply(a, b) {
+    const result = a * b;
+    this.lastResult = result;
+    return result;
+  }
+
+  divide(a, b) {
+    if (b === 0) {
+      throw new Error("Division by zero is not allowed");
+    }
+
+    const result = a / b;
+    this.lastResult = result;
+    return result;
+  }
+
+  exponentiate(base, exponent) {
+    if (exponent < 0) {
+      throw new Error("Exponentiation with negative exponent is not allowed");
+    }
+
+    const result = base ** exponent;
+    this.lastResult = result;
+    return result;
+  }
 }
 
 module.exports = {
@@ -75,4 +143,4 @@ module.exports = {
   isPalindrome,
   reverseString,
   Calculator,
-}
+};
