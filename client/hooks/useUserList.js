@@ -104,7 +104,7 @@ export default function useUserList() {
     // debounce para evitar que se ejecute la petición cada vez que se escribe en el input
     const debounce = setTimeout(() => {
       fetchUsers();
-    }, 500);
+    }, 250);
     return () => {
       return clearTimeout(debounce);
     };
