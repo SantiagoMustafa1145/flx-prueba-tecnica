@@ -1,6 +1,6 @@
 # Prueba Técnica Flexxus - CRUD de Usuarios en React
 
-- [📝 Instrucciones](#documentación)
+- [📝 Documentación](#documentación)
 - [📝 Instrucciones](#instrucciones)
 - [📝 Extra](#extra)
 - [📝 Recursos](#recursos)
@@ -100,9 +100,12 @@ Con ello ya estaría funcionando la paginación utilizando `page` y `per_page`.
 Debes descomentar las variables `page`, `perPage`, `setPage`, `setPerPage` y comentar las variables `offset`, `limit`, `setOffset`, `setLimit`.
 
 En las props que recibe la tabla verás que hay código comentado que utiliza `page` y `perPage` para actualizar la lista de usuarios.
-Puedes o descomentarlo y comentar el código que utiliza `offset` y `limit` para actualizar la lista de usuarios para así evitar errores y utilizar unicamente `page` y `perPage` para la paginación.
+Puedes descomentarlo y comentar el código que utiliza `offset` y `limit` para actualizar la lista de usuarios para así evitar errores y utilizar unicamente `page` y `perPage` para la paginación
+o direcamente elimiar el código y setearlo con `page` y `perPage`.
 
-Con ésto se empieza a utilizar la paginación con page y per_page.
+⚠️ recomiendo la primera opción.
+
+🚀 Con ésto se empieza a utilizar la paginación con page y per_page.
 
 <a id="sources"></a>
 
