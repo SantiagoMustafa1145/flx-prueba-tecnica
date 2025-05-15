@@ -70,7 +70,8 @@ Es necesario simular un tiempo de carga entre las peticiones con un setTimeOut, 
 
 ## EXTRA
 
-> [!NOTE] Paginado del listado de usuarios
+> [!NOTE]
+> Paginado del listado de usuarios
 >
 > Para la paginación del listado de usuarios hay dos métodos que se pueden utilizar en éste proyecto,
 > uno es utilizando `start` y `limit` y la otra utilizando `page` y `per_page`.
@@ -86,7 +87,8 @@ Es necesario simular un tiempo de carga entre las peticiones con un setTimeOut, 
 
 #### 1. Cambiar la función `fetchUsersStartLimit` por `fetchUsersPagePerPage`
 
-> [!WARNING] En la función `addUser` también se utiliza la función `fetchUsersStartLimit` para actualizar la lista de usuarios.
+> [!WARNING]
+> En la función `addUser` también se utiliza la función `fetchUsersStartLimit` para actualizar la lista de usuarios.
 > Por lo que se necesita cambiar la función `fetchUserStartLimit` por la función `fetchUsersPagePerPage` con las mismas variables salvo cambiando `limit`, `offset`, `setLimit`, `setOffset` por `perPage`, `page`, `setPerPage`, `setPage`.
 
 En el archivo `hooks/useUserList.js` cambiar la función `fetchUsersStartLimit` por `fetchUsersPagePerPage`.
